@@ -1,6 +1,6 @@
 package servicios;
 
-import interfaces.FuncionesDeMotor;
+import interfacesVehiculos.FuncionesDeMotor;
 
 public class FuncionesMotorElectrico implements FuncionesDeMotor {
 

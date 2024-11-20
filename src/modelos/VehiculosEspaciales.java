@@ -1,12 +1,13 @@
 package modelos;
 
-import interfaces.TipoDeMotor;
+import interfacesVehiculos.TipoDeMotor;
+import modelsengines.TamañoVehiculo;
 import servicios.Vehiculos;
 
 public class VehiculosEspaciales extends Vehiculos implements TipoDeMotor {
 
-    public VehiculosEspaciales(String nombre, int capacidad, String tamaño, int peso) {
-        super(nombre, capacidad, tamaño, peso);
+    public VehiculosEspaciales(String nombre, int capacidad, int peso, TamañoVehiculo tamaño) {
+        super(nombre, capacidad, peso, tamaño);
     }
 
     @Override

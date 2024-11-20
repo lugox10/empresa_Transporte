@@ -1,34 +1,27 @@
 package modelos;
 
-import interfaces.TipoDeMotor;
+import modelsengines.AirEngines;
+import modelsengines.TamañoVehiculo;
 import servicios.Vehiculos;
 
-public class VehiculosVoladores extends Vehiculos implements TipoDeMotor {
+public class VehiculosVoladores extends Vehiculos {
 
-    private String tipoTransporte;
+    private TipoTransporte tipoTransporte;
+    private AirEngines airEngines;
 
-    public VehiculosVoladores(String nombre, int capacidad, String tamaño, int peso, String tipoTransporte) {
-        super(nombre, capacidad, tamaño, peso);
+    public VehiculosVoladores(String nombre, int capacidad, int peso, TamañoVehiculo tamaño, TipoTransporte tipoTransporte, AirEngines airEngines) {
+        super(nombre, capacidad, peso, tamaño);
         this.tipoTransporte = tipoTransporte;
-    }
-
-    @Override
-    public void tiposMotorDescripcion() {
-        System.out.println("cualquier tipo de motor ");
+        this.airEngines = airEngines;
     }
 
     @Override
     public void informacionVehiculo() {
-
-        System.out.println("Vehiculo volador tipo: " + getNombre());
-        System.out.println("capacidad en pasajeros:  " + getCapacidad() +"pasajeros");
+        System.out.println("Vehiculo Aereo :" + getNombre());
+        System.out.println("capacidad en pasajeros:  " + getCapacidad() + "pasajeros");
         System.out.println("tamaño: " + getTamaño());
         System.out.println("peso: " + getPeso() + "kolgramos");
-
-        System.out.println(tipoTransporte);
-       tiposMotorDescripcion();
-
-
+        System.out.println("tipo de transporte :" + tipoTransporte);
+        airEngines.informacionMotor();
     }
-
 }

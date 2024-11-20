@@ -1,72 +1,59 @@
 package modelsengines;
 
-import interfaces.CombustiblesParaMotor;
+public class Motor  {
 
-public class Motor {
+    private String fabricanteMotor;
+    private String modeloMotor;
+    private String MarcaMotor;
+    private float pesoMotor;
 
-    private String fabricante;
-    private String modelo;
-    private String Marca;
-    private float peso;
-    protected CombustiblesParaMotor combustiblesParaMotor;
-
-    public Motor(String fabricante, String modelo, String marca, float peso, CombustiblesParaMotor combustiblesParaMotor) {
-        this.fabricante = fabricante;
-        this.modelo = modelo;
-        Marca = marca;
-        this.peso = peso;
-        this.combustiblesParaMotor = combustiblesParaMotor;
+    public Motor(String fabricanteMotor, String modeloMotor, String marcaMotor, float pesoMotor) {
+        this.fabricanteMotor = fabricanteMotor;
+        this.modeloMotor = modeloMotor;
+        MarcaMotor = marcaMotor;
+        this.pesoMotor = pesoMotor;
     }
 
 
-    public String verFichaTecnica() {
-        return "Motor{" +
-                "fabricante='" + fabricante + '\'' +
-                ", modelo='" + modelo + '\'' +
-                ", Marca='" + Marca + '\'' +
-                ", peso=" + peso + "toneladas"+
-                ", combustiblesParaMotor=" + combustiblesParaMotor +
-                '}';
+    public void informacionMotor() {
+
+        System.out.println("Nombre Fabricante Motor:" + getFabricanteMotor());
+        System.out.println("Modelo Motor: " + getModeloMotor());
+        System.out.println("Marca Motor: " + getMarcaMotor());
+        System.out.println("Peso Motor: " + getPesoMotor());
+
     }
 
-    public String getFabricante() {
-        return fabricante;
+    public String getFabricanteMotor() {
+        return fabricanteMotor;
     }
 
-    public void setFabricante(String fabricante) {
-        this.fabricante = fabricante;
+    public void setFabricanteMotor(String fabricanteMotor) {
+        this.fabricanteMotor = fabricanteMotor;
     }
 
-    public String getModelo() {
-        return modelo;
+    public String getModeloMotor() {
+        return modeloMotor;
     }
 
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
+    public void setModeloMotor(String modeloMotor) {
+        this.modeloMotor = modeloMotor;
     }
 
-    public String getMarca() {
-        return Marca;
+    public String getMarcaMotor() {
+        return MarcaMotor;
     }
 
-    public void setMarca(String marca) {
-        Marca = marca;
+    public void setMarcaMotor(String marcaMotor) {
+        MarcaMotor = marcaMotor;
     }
 
-    public float getPeso() {
-        return peso;
+    public float getPesoMotor() {
+        return pesoMotor;
     }
 
-    public void setPeso(float peso) {
-        this.peso = peso;
-    }
-
-    public CombustiblesParaMotor getCombustiblesParaMotor() {
-        return combustiblesParaMotor;
-    }
-
-    public void setCombustiblesParaMotor(CombustiblesParaMotor combustiblesParaMotor) {
-        this.combustiblesParaMotor = combustiblesParaMotor;
+    public void setPesoMotor(float pesoMotor) {
+        this.pesoMotor = pesoMotor;
     }
 
 

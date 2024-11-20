@@ -1,11 +1,10 @@
 package modelsengines;
 
-import interfaces.CombustiblesParaMotor;
-
 public class LandEngines extends Motor{
 
-    public LandEngines(String fabricante, String modelo, String marca, float peso, CombustiblesParaMotor combustiblesParaMotor) {
-        super(fabricante, modelo, marca, peso, combustiblesParaMotor);
+
+    public LandEngines(String fabricanteMotor, String modeloMotor, String marcaMotor, float pesoMotor) {
+        super(fabricanteMotor, modeloMotor, marcaMotor, pesoMotor);
     }
 
     void GasolineinternalCombustionEngines() {

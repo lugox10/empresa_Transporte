@@ -1,14 +1,14 @@
 package modelos;
 
-import interfaces.TipoDeMotor;
+import interfacesVehiculos.TipoDeMotor;
+import modelsengines.TamañoVehiculo;
 import servicios.Vehiculos;
 
 public class VehiculosFluviales extends Vehiculos implements TipoDeMotor {
 
 
-
-    public VehiculosFluviales(String nombre, int capacidad, String tamaño, int peso) {
-        super(nombre, capacidad, tamaño, peso);
+    public VehiculosFluviales(String nombre, int capacidad, int peso, TamañoVehiculo tamaño) {
+        super(nombre, capacidad, peso, tamaño);
     }
 
     @Override

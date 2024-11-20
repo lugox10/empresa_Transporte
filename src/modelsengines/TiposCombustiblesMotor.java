@@ -1,6 +1,6 @@
 package modelsengines;
 
-public enum CombustiblesMotor {
+public enum TiposCombustiblesMotor {
 
     diesel,
     gasolina_corriente,

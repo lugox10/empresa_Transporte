@@ -1,11 +1,8 @@
-import interfaces.CombustiblesParaMotor;
-import interfaces.TipoDeMotor;
-import modelsengines.AirEngines;
-import modelsengines.CombustiblesMotor;
-import modelsengines.Motor;
-import servicios.FuncionesMotorElectrico;
-import modelos.VehiculosTerresres;
+import modelos.TipoTransporte;
 import modelos.VehiculosVoladores;
+import modelsengines.AirEngines;
+import modelsengines.TamañoVehiculo;
+import modelsengines.TiposCombustiblesMotor;
 import servicios.ListaVehiculos;
 import servicios.Vehiculos;
 
@@ -19,22 +16,17 @@ public class Main {
         ListaVehiculos mostrarLista = new ListaVehiculos();
         List<Vehiculos> lista = new ArrayList<>();
 
-        Vehiculos volador = new VehiculosVoladores("avion", 100, "grande", 50, "carga");
-        Vehiculos TERRESTRE = new VehiculosTerresres("camion", 100, "grande", 10);
+        Vehiculos volador = new VehiculosVoladores("avion", 100, 1000, TamañoVehiculo.grande, TipoTransporte.comercial,
+                new AirEngines("general", "boing ", "737", 100, TiposCombustiblesMotor.gasolina_premium));
+
+
+        mostrarLista.agregar(volador);
 
 
 
+        mostrarLista.mostrarVehiculos();
 
-
-
-
-
-        // mostrarLista.agregar(volador);
-        // mostrarLista.agregar(TERRESTRE);
-
-
-        // mostrarLista.mostrarVehiculos();
-
+        //mastervoy a tratar de meterle listas independientes
 
     }
 }

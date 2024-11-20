@@ -1,35 +1,48 @@
 package modelsengines;
 
-import interfaces.CombustiblesParaMotor;
+import InterfacesMotores.MotoresAereos;
 
-public class AirEngines extends Motor {
-    private CombustiblesMotor combustibles;
+public class AirEngines extends Motor implements MotoresAereos {
+    protected TiposCombustiblesMotor tiposCombustiblesMotor;
 
-    public AirEngines(String fabricante, String modelo, String marca, float peso,
-                      CombustiblesParaMotor combustiblesParaMotor, CombustiblesMotor combustibles) {
-        super(fabricante, modelo, marca, peso, combustiblesParaMotor);
-        this.combustibles = combustibles;
+
+    public AirEngines(String fabricanteMotor, String modeloMotor, String marcaMotor, float pesoMotor, TiposCombustiblesMotor tiposCombustiblesMotor) {
+        super(fabricanteMotor, modeloMotor, marcaMotor, pesoMotor);
+        this.tiposCombustiblesMotor = tiposCombustiblesMotor;
     }
 
-    void jetEngines() {
-        System.out.println("Motor utilizado en aviones de carga y comerciales y militar");
-        verFichaTecnica();
-        combustiblesParaMotor.tipoCombustible("diesel");
+    @Override
+    public void informacionMotor() {
+
+        System.out.println("Nombre Fabricante Motor:" + getFabricanteMotor());
+        System.out.println("Modelo Motor: " + getModeloMotor());
+        System.out.println("Marca Motor: " + getMarcaMotor());
+        System.out.println("Peso Motor: " + getPesoMotor() + "Kilogramos");
+        System.out.println("Tipo Combustible: " + tiposCombustiblesMotor);
+        jetEngines();
+
     }
 
-    void pistonEngines() {
+    public TiposCombustiblesMotor getTiposCombustiblesMotor() {
+        return tiposCombustiblesMotor;
+    }
+
+    public void setTiposCombustiblesMotor(TiposCombustiblesMotor tiposCombustiblesMotor) {
+        this.tiposCombustiblesMotor = tiposCombustiblesMotor;
+    }
+
+    @Override
+    public void jetEngines() {
+        System.out.println("Motor utilizado en aviones de carga, comerciales y militares");
+    }
+
+    @Override
+    public void pistonEngines() {
         System.out.println("motores para aviones ligeros");
     }
 
-    void AerialElectricMotors() {
+    @Override
+    public void AerialElectricMotors() {
         System.out.println("en desarrollo para aviones ligeros");
-    }
-
-    public CombustiblesMotor getCombustibles() {
-        return combustibles;
-    }
-
-    public void setCombustibles(CombustiblesMotor combustibles) {
-        this.combustibles = combustibles;
     }
 }

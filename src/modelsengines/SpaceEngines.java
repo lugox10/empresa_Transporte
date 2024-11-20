@@ -1,10 +1,9 @@
 package modelsengines;
 
-import interfaces.CombustiblesParaMotor;
-
 public class SpaceEngines extends Motor{
-    public SpaceEngines(String fabricante, String modelo, String marca, float peso, CombustiblesParaMotor combustiblesParaMotor) {
-        super(fabricante, modelo, marca, peso, combustiblesParaMotor);
+
+    public SpaceEngines(String fabricanteMotor, String modeloMotor, String marcaMotor, float pesoMotor) {
+        super(fabricanteMotor, modeloMotor, marcaMotor, pesoMotor);
     }
 
     void ionesEngines(){

@@ -1,18 +1,20 @@
 package servicios;
 
+import modelsengines.TamañoVehiculo;
+
 public abstract class Vehiculos {
 
 
     private String nombre;
     private int capacidad;
-    private String tamaño;
+    private TamañoVehiculo tamaño;
     private int peso;
 
-    public Vehiculos(String nombre, int capacidad, String tamaño, int peso) {
+    public Vehiculos(String nombre, int capacidad, int peso, TamañoVehiculo tamaño) {
         this.nombre = nombre;
         this.capacidad = capacidad;
-        this.tamaño = tamaño;
         this.peso = peso;
+        this.tamaño = tamaño;
     }
 
     public abstract void informacionVehiculo();
@@ -33,11 +35,11 @@ public abstract class Vehiculos {
         this.capacidad = capacidad;
     }
 
-    public String getTamaño() {
+    public TamañoVehiculo getTamaño() {
         return tamaño;
     }
 
-    public void setTamaño(String tamaño) {
+    public void setTamaño(TamañoVehiculo tamaño) {
         this.tamaño = tamaño;
     }
 

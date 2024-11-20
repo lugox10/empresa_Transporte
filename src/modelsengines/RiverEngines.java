@@ -1,10 +1,10 @@
 package modelsengines;
 
-import interfaces.CombustiblesParaMotor;
-
 public class RiverEngines extends Motor{
-    public RiverEngines(String fabricante, String modelo, String marca, float peso, CombustiblesParaMotor combustiblesParaMotor) {
-        super(fabricante, modelo, marca, peso, combustiblesParaMotor);
+
+
+    public RiverEngines(String fabricanteMotor, String modeloMotor, String marcaMotor, float pesoMotor) {
+        super(fabricanteMotor, modeloMotor, marcaMotor, pesoMotor);
     }
 
     void engineDisel(){
